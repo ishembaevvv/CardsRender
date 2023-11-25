@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Cards from "./components/Cards";
+
+const data = [
+  {
+    index: 1,
+    color: 'yellow'
+  },
+  {
+    index: 2,
+    color: 'green'
+  },
+  {
+    index: 3,
+    color: 'red'
+  },
+  {
+    index: 4,
+    color: 'blue'
+  },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        data.map((item, id) => {
+          return <Cards
+            index={item.index}
+            color={item.color}
+          />
+        })
+      }
     </div>
   );
 }

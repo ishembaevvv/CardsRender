@@ -1,0 +1,17 @@
+%ani {
+    transition: .3s;
+}
+
+.Cards {
+    width: 100px;
+    height: 200px;
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    @extend %ani;
+    &:hover {
+        width: 200px;
+        @extend %ani;
+    }
+}
